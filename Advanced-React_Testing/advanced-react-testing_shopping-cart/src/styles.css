@@ -1,0 +1,33 @@
+:root {
+  --nemo: #ff4a11;
+  --granite: #252629;
+  --water: #f3f5f9;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: system-ui;
+  color: var(--granite);
+}
+
+button {
+  cursor: pointer;
+}
+
+.card,
+.cart-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--water);
+  border-radius: 4px;
+}
+
+.badge {
+  padding: 2px 8px;
+  margin-right: 4px;
+  color: white;
+  background: var(--nemo);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
