@@ -1,0 +1,17 @@
+{
+  "name": "advanced-unit-testing_fake-timers",
+  "version": "0.0.0-unreleased",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.9",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.9"
+  }
+}
