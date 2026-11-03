@@ -1,9 +1,15 @@
-import { test, vi } from "vitest";
+import { expect, test, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CartItem from "../CartItem";
 import ShippingEstimate from "../ShippingEstimate";
 import Cart from ".";
+vi.mock("../CartItem", () => ({
+  default: vi.fn(() => <div data-testid="cart-item">CartItem</div>),
+}));
+vi.mock("../ShippingEstimate", () => ({
+  default: vi.fn(() => <div data-testid="shipping-estimate">ShippingEstimate</div>),
+}));
 
 // TODO: Replace CartItem and ShippingEstimate with vi.mock.
 //
@@ -20,6 +26,9 @@ const initialItems = [
 ];
 
 test("renders a CartItem for every item", () => {
+  render(<Cart initialItems={initialItems} />);
+  expect(screen.getByText("Coffee Grinder")).toBeInTheDocument();
+  expect(screen.getByText("Coffee Beans")).toBeInTheDocument();
   // Both item names are on the screen.
 });
 

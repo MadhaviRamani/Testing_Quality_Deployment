@@ -22,13 +22,15 @@ export default function ProductCard({
   discount = 0,
   addedAt,
 }: ProductCardProps) {
-  const salePrice = discount > 0 ? (price * discount) / 100 : price;
+  const salePrice = discount > 0 ? price - ((price * discount) / 100) : price;
 
   return (
     <article className="card">
       <h2>{name}</h2>
-      {isNew(addedAt) && <span className="badge">New</span>}
-      {discount > 0 && <span className="badge">Sale -{discount}%</span>}
+      {isNew(addedAt) && <span className="badge" data-testid="new-badge">
+        New
+      </span>}
+      {discount > 0 && <span className="badge">Offer -{discount}%</span>}
       <p>
         {discount > 0 && <s>{formatPrice(price)}</s>}{" "}
         <strong>{formatPrice(salePrice)}</strong>

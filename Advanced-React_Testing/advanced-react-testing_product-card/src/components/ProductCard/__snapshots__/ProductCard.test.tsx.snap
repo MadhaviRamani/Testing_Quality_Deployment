@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches the snapshot of a product on sale 1`] = `
+<DocumentFragment>
+  <article
+    class="card"
+  >
+    <h2>
+      Coffee Grinder
+    </h2>
+    <span
+      class="badge"
+    >
+      Offer -25%
+    </span>
+    <p>
+      <s>
+        80.00 €
+      </s>
+       
+      <strong>
+        60.00 €
+      </strong>
+    </p>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`matches the snapshot of a regular product > <DocumentFragment>
+    
+    <div data-testid="product-card">Coffee Grinder</div>
+    
+    </DocumentFragment> 1`] = `
+<DocumentFragment>
+  <article
+    class="card"
+  >
+    <h2>
+      Coffee Grinder
+    </h2>
+    <p>
+       
+      <strong>
+        80.00 €
+      </strong>
+    </p>
+  </article>
+</DocumentFragment>
+`;
